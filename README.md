@@ -26,9 +26,9 @@ Myeong Lee
 - Two developers are working on a software project. Developer A made changes in the code and published it to the server. The other developer B didn't know about this. He made his own changes and published it to the server. A's changes have gone since B didn't have A's changes on his laptop.
 	- Git keeps track of every change from each person, so B cannot ignore A's changes if they're using Git for the project. 
 - There is an open source project. Developer A is the organizer of the project. A made a main codebase and recruited other developers who wanted to contribute to the code. 1,000 people provided their own extensions to A, and A had a hard time reviewing all different kinds of codes. 
-	- Git has a mechanism called "folk". This allows other developers freely modify a project. Once a contributor finishes his or her work, it is possible to make a "pull request" to the project organizer so that the organizer can manage various contributions in a systematic way.  
+	- Git has a mechanism called "fork". This allows other developers freely modify a project. Once a contributor finishes his or her work, it is possible to make a "pull request" to the project organizer so that the organizer can manage various contributions in a systematic way.  
 - Student A was working on a software project. She finished two out of three assignments. Then she modified something to finish the last part. Suddenly, the whole system didn't work and the first two parts were also broken due to the latest change. It was very hard to go back to the state before starting working on the third part.
-	- Similar to the first example, Git keeps track of every code changes whenever a user "commit" his or her changes. It's very easy to go back to a previous state when something is broken.
+	- Similar to the first example, Git keeps track of every code changes whenever a user "commits" his or her changes. It's very easy to go back to a previous state when something is broken.
 	- See [an example](https://github.com/myeong/DCIC-Human-Face/commits/master) of a commit history on Github.
 
 <a name="products"></a>	
@@ -47,21 +47,21 @@ We will use [Github](http://github.com) in this session since it is most widely 
 
 1. Branching
 	- For a Git repository, it's possible to make other branches so to keep the original codebase (useful when developing a particular feature while not wanting to break the original code).
-2. Folking
-	- If you're interested in an existing (public) project by other users, you can "folk" the project to your account. This copies the entire project to your own account so you can work freely on it. 
+2. Forking
+	- If you're interested in an existing (public) project by other users, you can "fork" the project to your account. This copies the entire project to your own account so you can work freely on it. 
 3. Basic Website
-	- Github provides a functionality that you can create a simple website that directly uses code on your Git repo.
+	- Github provides a functionality to create a simple website that directly uses the code on your Git repo.
 	- The URL convention is `http://[title].github.io`
 4. MarkDown (MD) Support
 	- Markdown is a simple language for web-based documents.
-	- You can write a Markdown document using MD syntex. Then, its rendered document appears on the Git repo page. 
+	- You can write a Markdown document using MD syntax. Then, its rendered document appears on the Git repo page. 
 5. Privacy Setting
 	- It's possible to make your repo private (so other people cannot see your private repos). In Github, the private repo service is not free, but there's a student account option. 
 6. Code Review Interface
 	- When a pull request is made (i.e., someone wants to make a contribution to an existing project), the owner of the project can review others' code line-by-line and make comments on each line if necessary. 
-	- Since only lines that are changed are shown to the owner, so it's easy to review others' code. 
+	- Since only lines that are changed are shown to the owner, it's easy to review others' contributions. 
 7. Issues
-	- It's possible to discuss any issues related to a project like an online forum. This feature faciliates communications between project owners and other contributors and users.
+	- It's possible to discuss any issue related to a project like in online forums. This feature faciliates communications between project owners and other contributors and users.
 
 <a name="process"></a>
 # Git Process
@@ -70,7 +70,7 @@ This is the core part of the Git session: how to use the Git?
 ### Prerequisites
 In order to use Git on your computer, you might need to install an app. After install the required app, every Git process is done either on the Github website or on your command-line app.
 
-- If you're using **Mac**, it is possible that Git is already installed along with Xcode. Try to open "Terminal" app, and type `git` and hit "enter". If not installed, Mac will automatically open a window to install Git. 
+- If you're using **Mac**, it is possible that Git is already installed along with Xcode. Try to open the "Terminal" app, and type `git` and hit "enter". If not installed, Mac will automatically open a window to install Git. 
 - If you're using **Windows**, install "Git Shell" or "Git Bash". It is available at [this link](https://git-scm.com/download/win)
 - If you're using **Linux**, see [this page](https://git-scm.com/download/linux) for the instruction -- the installation command is different depending on the Linux version.
 
@@ -105,17 +105,17 @@ Git clone is required only once for each repository (at the very first time).
 	```
 	git clone [your Git repo URL that you copied]
 	```
-5. Then, it automatically downloads all files from your Git repo to your computer. It is possible that there's no file (if you haven't create anything). 
+5. Then, it automatically downloads all files from your Git repo to your computer. It is possible that there's no file (if you haven't created anything). 
 6. In order to check whether it downloaded successfully, get into the folder
 
 	```
-	# Getting in to the directory
+	# Getting into the directory
 	cd [the downloaded Git repo name]
 	
 	# Check whether it was successful
 	git status
 	```
-7. If the result of `git status` shows something like `Your branch is up-to-date`, then that means it was successful. If you cannot get into the folder, or you see any error message, it was not successful somehow. 
+7. If the result of `git status` shows something like `Your branch is up-to-date`, then that means it was successful. If you cannot get into the folder, or you see any error messages, it was not successful somehow. 
 
 ### Making Changes in Your Repo
 Mostly, you will work on your computer. In the cloned folder, you can create files that you will work on. Let's try to create a sample file for exercise. 
@@ -162,7 +162,7 @@ If you want to keep your code safe, and do some experiment with it at the same t
 ``` 
 git checkout -b [branch_name]
 ```
-Note that the `-b` option is only when you first create a new branch. You will not use this option for existing branches. 
+Note that the `-b` option is only needed when you first create a new branch. You will not use this option for existing branches. 
 Then, you have created a new branch and now you're in the new branch. Your "master" branch is safely kept in another world. If you want to check what branch you're in, you can type:
 
 ```
@@ -199,13 +199,13 @@ It is possible to see graphically how your branching has been processed on the w
 Then, it shows how branches were created and merged among each other. 
 
 
-### Exercise: Folking and Contributing to the Original Code Base
+### Exercise: Forking and Contributing to the Original Code Base
 1. Go to this Git repo web page: `https://github.com/myeong/INST377`
-2. Click "Folk"
-3. Go to your folked repo. It should be something like `https://github.com/[your_id]/INST377`
+2. Click "Fork"
+3. Go to your forked repo. It should be something like `https://github.com/[your_id]/INST377`
 4. Clone it to your PC.
 5. Go to `git/introductions/` folder, and create a Markdown file with your last name. `[your_last_name].md`
-6. Open the file, write down any one sentence in the Markdown file, and save it. 
+6. Open the file, write down any sentence into the Markdown file, and save it. 
 7. In the command line, `git add .`
 8. `git commit -m "my name added"`
 9. `git push origin master`
@@ -218,39 +218,39 @@ Type `git remote add upstream https://github.com/myeong/INST377.git`
 15. Check again whether the original repo has been registered.
 	- `git remote -v`
 16. The original repo that you are contributing to is now registered on your local folder. 
-17. You pull down the most recent changes on your computer by typing 
+17. Pull down the most recent changes on your computer by typing 
 	- `git fetch upstream`
-18. You merge "upstream" to your local repo.
+18. Merge "upstream" to your local repo.
 	- `git merge upstream/master`
-19. You push the most recent changes to your online repo
+19. Push the most recent changes to your online repo
 	- `git push origin master`
 
 
 ### Collaborating with your Colleague(s)
-For your own project, you normally use `commit` and `push` to manage your code, and you many not use other commands that much. However, Git is often used for collaboration with other colleagues. Let's do some exercises on collaborating with your friend. 
+For your own project, you normally use `commit` and `push` to manage your code, and you may not use other commands that much. However, Git is often used for collaboration with other colleagues. Let's do some exercises on collaborating with your friend. 
 
 1. Pair up with a colleague next to you. On the browser, go to your friend's Git repo page by typing your friend's Git repo URL. For example, you may go to `https://github.com/myeong/INST377`
-2. Click the "Folk" button at the top. 
-3. Once you folk your friend's repo, you just copied your friend's precious project to your account. 
-4. Go to your folked repo page (you can see it in your repo list on your main Git page).
+2. Click the "Fork" button at the top. 
+3. Once you fork your friend's repo, you just copied your friend's precious project to your account. 
+4. Go to your forked repo page (you can see it in your repo list on your main Git page).
 5. Go to the terminal, get out of your original repo folder. For example: 
 
 	```
 	cd ..
 	```
-6. Clone your folked repo to your computer. The steps are same to before, but just the address of the repo is different. If not sure, follow the steps in [Cloning a Git Repo](#clone).
-7. Get into the cloned repo folder. Remember, this is a repo "folked" from your friend's account. 
+6. Clone your forked repo to your computer. The steps are same as before, but just the address of the repo is different. If not sure, follow the steps in [Cloning a Git Repo](#clone).
+7. Get into the cloned repo folder. Remember, this is a repo "forked" from your friend's account. 
 
 	```
-	cd [name of the folked repo]
+	cd [name of the forked repo]
 	```
-8. In the folked folder, there is a file that your friend created. Let's create another file. 	
-	- Open your text editor, create a new file, write something in it, and save it in the folked repo folder with your name (e.g., `[your_name].md`).
+8. In the forked folder, there is a file that your friend created. Let's create another file. 	
+	- Open your text editor, create a new file, write something in it, and save it into the forked repo folder with your name (e.g., `[your_name].md`).
 	- Add, commit, and push your change. 
-	- Once pushing your changes, your file is uploaded to your folked Git repo, not your friend's repo. But you want to give your changes to your friend.
-9. Go to the web page of your folked repo. There is a button called "New Pull Request". Click it. 
-10. You will see "base fork" and "head fork" in the web page. "Base fork" is the original repo that you want to contribute to (in this case, your friend's repo). "Head fork" is your folked repo that you just made changes. You are basically trying to ask your friend to merge your changes.
-11. If you see the "Create Pull Request" button (in green), click it. Then, you can write down a message about your contribution. Once you make a pull-request, your friend will receive the request from his or her email or on the Github website. **Now, as a contributor, your work is done.** 
+	- Once pushing your changes, your file is uploaded to your forked Git repo, not your friend's repo. But you want to give your changes to your friend.
+9. Go to the web page of your forked repo. There is a button called "New Pull Request". Click it. 
+10. You will see "base fork" and "head fork" in the web page. "Base fork" is the original repo that you want to contribute to (in this case, your friend's repo). "Head fork" is your forked repo that you just made changes to. You are basically trying to ask your friend to merge your changes.
+11. If you see the "Create Pull Request" button (in green), click it. Then, you can write down a message about your contribution. Once you made a pull-request, your friend will receive the request from his or her email or on the Github website. **Now, as a contributor, your work is done.** 
 12. As an original project owner, you receive a pull request from your friend. In your original project repo page, you can see there is one pull request. Click "Pull requests" menu. 
 13. You can see your friend's message. If you have any opinion, you can comment on it as well. This conversation can go on as a thread. Once you're satisfied with your friend's contribution, click the `Merge Pull Request` button. Don't click `Comment and Close` button unless you don't want to merge it. Subsequenlty, it is possible that you need to click `Confirm merge` to complete the merge. 
 14. Once it says it was successfully merged, your project is finally contributed by your friend. As a contributor, you also made success in contributing to your friend's project. 
@@ -269,7 +269,7 @@ Your Git repo has been contributed by your friend, but your computer still doesn
 
 <a name="advanced"></a>
 # Advanced Topics
-We just covered very basic functionalities of Git. If your time allows, it's also very useful to know some more advanced features and topics that you can do using Github. Advanced topics include, but are not limited to:
+We just covered very basic functionalities of Git. If your time allows, it's also very useful to know some more advanced features and topics that are available in Github. Advanced topics include, but are not limited to:
 
 - [How to make a website using Github](https://pages.github.com/): when you want to provide a simple website about your project. 
 - [How to use MarkDown](http://www.markdowntutorial.com/): when you create a simple but well-styled document for your Git repo page. 
