@@ -151,9 +151,11 @@ Type:
 3. Finally, upload your changes to your online repo (in the Github). Type:
  
 	```
-	git push origin master
+	git push origin main
 	```
-	By default, your branch is "master". Later, you can create other branches as needed.
+	By default, your branch is "main". Later, you can create other branches as needed.
+	
+	If you have difficulty authenticating commits, see these instructions for committing with SSH or Https: https://docs.github.com/en/get-		started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls%20for%20information%20on%20currently%20recommended%20modes%20of%20authentication.
 
 
 ### Branching 
