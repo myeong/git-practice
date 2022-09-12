@@ -136,7 +136,6 @@ Mostly, you will work on your computer. In the cloned folder, you can create fil
 ### Adding and Commiting Your Changes (Your PC &rarr; Github, whenever you make changes)
 
 1. First of all, you need to register your changes so your files are controled under the Git system. The first step is to "add" your changes.
-Type:
 	
 	```
 	# Dot (.) means everything in the folder.
@@ -155,7 +154,7 @@ Type:
 	```
 	By default, your branch is "main". Later, you can create other branches as needed.
 	
-	To authenticate commits using https you will need to [create a token]([https://docs.github.com/en/enterprise-server@3.4/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token])
+	To authenticate commits using https you will need to [create a token](https://docs.github.com/en/enterprise-server@3.4/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token/).
 
 ### Branching 
 If you want to keep your code safe, and do some experiment with it at the same time, you can use "branching". In your repo, you can create a new branch by typing:
@@ -164,12 +163,12 @@ If you want to keep your code safe, and do some experiment with it at the same t
 git checkout -b [branch_name]
 ```
 Note that the `-b` option is only needed when you first create a new branch. You will not use this option for existing branches. 
-Then, you have created a new branch and now you're in the new branch. Your "master" branch is safely kept in another world. If you want to check what branch you're in, you can type:
+Then, you have created a new branch and now you're in the new branch. Your "main" branch is safely kept in another world. If you want to check what branch you're in, you can type:
 
 ```
 git branch
 ```
-Make changes in your original test file using your editor, and save it. If you type `git status`, you can see there is a change in your repo. Add, commit, and push to your Github repo. You need to be careful: now you're pushing to your new branch, not to your master branch. For example:
+Make changes in your original test file using your editor, and save it. If you type `git status`, you can see there is a change in your repo. Add, commit, and push to your Github repo. You need to be careful: now you're pushing to your new branch, not to your main branch. For example:
 
 ```
 git add .
@@ -177,22 +176,22 @@ git commit -m "new branch's change"
 git push origin [branch_name]
 ```
 
-Let's suppose that your experiment in the new branch was successful. Then, you want to merge your changes in the new branch to your master branch. In this case, you need to switch to the master branch first by typing:
+Let's suppose that your experiment in the new branch was successful. Then, you want to merge your changes in the new branch to your main branch. In this case, you need to switch to the main branch first by typing:
 
 ```
-git checkout master
+git checkout main
 ```
-Now, you're in the master branch without your new changes. You can merge the new changes from the other branch by typing:
+Now, you're in the main branch without your new changes. You can merge the new changes from the other branch by typing:
 
 ```
 git merge [branch_name]
 ```
-Now, your master branch has the new changes made in the new branch. However, these changes are only in your computer, not on the Github repository (you pushed your changes to your new branch only, not to the master branch yet).
+Now, your main branch has the new changes made in the new branch. However, these changes are only in your computer, not on the Github repository (you pushed your changes to your new branch only, not to the main branch yet).
 
-Since the changes are already added and committed in the new branch, you can just push it in the master branch. 
+Since the changes are already added and committed in the new branch, you can just push it in the main branch. 
 
 ```
-git push origin master
+git push origin main
 ```
 Then, both of your branches have up-to-date changes. 
 
@@ -209,7 +208,7 @@ Then, it shows how branches were created and merged among each other.
 6. Open the file, write down any sentence into the Markdown file, and save it. 
 7. In the command line, `git add .`
 8. `git commit -m "my name added"`
-9. `git push origin master`
+9. `git push origin main`
 10. On the Github repo page, click "pull request" button and submit your pull request.
 11. The instructor comments on the pull requests and merges them.
 12. Now, your change has been applied to the original project repository.
@@ -222,9 +221,9 @@ Type `git remote add upstream https://github.com/myeong/INST377.git`
 17. Pull down the most recent changes on your computer by typing 
 	- `git fetch upstream`
 18. Merge "upstream" to your local repo.
-	- `git merge upstream/master`
+	- `git merge upstream/main`
 19. Push the most recent changes to your online repo
-	- `git push origin master`
+	- `git push origin main`
 
 
 ### Collaborating with your Colleague(s)
@@ -263,7 +262,7 @@ Your Git repo has been contributed by your friend, but your computer still doesn
 2. Type this:
 
 	```
-	git pull origin master
+	git pull origin main
 	```
 3. Then, your friend's recent contribution will be downloaded to your computer. 
 
