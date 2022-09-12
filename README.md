@@ -155,8 +155,7 @@ Type:
 	```
 	By default, your branch is "main". Later, you can create other branches as needed.
 	
-	To authenticate commits using https you will need to [create a token] (https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls%20for%20information%20on%20currently%20recommended%20modes%20of%20authentication
-
+	To authenticate commits using https you will need to [create a token](https://github.com/myeong/DCIC-Human-Face/commits/master) of a commit history on Github.
 
 ### Branching 
 If you want to keep your code safe, and do some experiment with it at the same time, you can use "branching". In your repo, you can create a new branch by typing:
